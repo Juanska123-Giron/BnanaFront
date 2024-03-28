@@ -1,19 +1,19 @@
 import React from "react";
-const features = [
-    { name: 'Origen', description: "Cada compra aporta un 70% de su costo al programa BasuraZero" },
-    { name: 'Materiales', description: 'Cartón biodegradable con fibras naturales de bambú para una opción sostenible y amigable con el medio ambiente.' },
-    { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-    { name: 'Acabado', description: 'Hecho a mano por trabajadores locales' },
-    { name: 'Incluye', description: 'Gift card por $10 redimible en tienda virtual y física' },
-    { name: 'Consideraciones', description: 'El porcentaje destinado a caridad no puede superar $200 por compra' },
-]
+    // const features = [
+    //     { name: 'Origen', description: "Cada compra aporta un 70% de su costo al programa BasuraZero" },
+    //     { name: 'Materiales', description: 'Cartón biodegradable con fibras naturales de bambú para una opción sostenible y amigable con el medio ambiente.' },
+    //     { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
+    //     { name: 'Acabado', description: 'Hecho a mano por trabajadores locales' },
+    //     { name: 'Incluye', description: 'Gift card por $10 redimible en tienda virtual y física' },
+    //     { name: 'Consideraciones', description: 'El porcentaje destinado a caridad no puede superar $200 por compra' },
+    // ]
   
 export function Info1() {
     
   return (
     <>      
-    <section className="px-4  pb-0" dir="rtl">
-            <div className="container mx-auto">
+    <section>
+            {/* <div className="container mx-auto">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-30 sm:px-6 sm:py-16 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
                     
                     <div>
@@ -53,7 +53,7 @@ export function Info1() {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
       </section>
     </>
   );

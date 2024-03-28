@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Comments = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-white px-6 py-16 sm:py-24 lg:px-8">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.amber.500),white)] opacity-10" />
+    <section>
+      {/* <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.amber.500),white)] opacity-10" />
       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-amber-600/10 ring-1 ring-amber-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <img className="mx-auto h-12" src="/img/banana.svg"/>
@@ -27,7 +27,7 @@ export const Comments = () => {
             </div>
           </figcaption>
         </figure>
-      </div>
+      </div> */}
     </section>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Brands = () => {
     return (
-        <div className="bg-white py-10 sm:pt-16 pb-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div>
+          {/* <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
               Distribuidores de las marcas No.1 en el mundo
             </h2>
@@ -45,7 +45,7 @@ export const Brands = () => {
                 height={48}
               />
             </div>
-          </div>
+          </div> */}
         </div>
       )
 }

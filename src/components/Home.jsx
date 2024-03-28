@@ -21,9 +21,9 @@ export const Home = ({ isPopoverOpen, handlePopoverOpen, handlePopoverClose, log
     }, []);
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow">
        <div data-aos="zoom-out">
-        <>
           <Navbar
             isPopoverOpen={isPopoverOpen}
             handlePopoverOpen={handlePopoverOpen}
@@ -31,14 +31,14 @@ export const Home = ({ isPopoverOpen, handlePopoverOpen, handlePopoverClose, log
             loggedInUser={loggedInUser}
             setLoggedInUser={setLoggedInUser}
           />
-        </>
       </div>
       <div data-aos='zoom-in'>
         <>
           <AfterNav isPopoverOpen={isPopoverOpen}/>
         </>
       </div>
-      <div data-aos='fade-up'>
+      </div>
+      {/* <div data-aos='fade-up'>
         <Info1 />
       </div>
       <div data-aos='zoom-in'>
@@ -49,7 +49,7 @@ export const Home = ({ isPopoverOpen, handlePopoverOpen, handlePopoverClose, log
       </div>
       <div data-aos='zoom-in'>
         <Comments />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );

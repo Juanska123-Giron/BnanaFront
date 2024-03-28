@@ -3,25 +3,8 @@ export const Footer = () => {
     return(
         <section className="bg-white">
             <div className="max-w-screen-xl px-4 pt-12 pb-6 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-                <nav className="flex flex-wrap justify-center -mx-5 -my-2">
-                    <div className="px-5 py-2">
-                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                            Conócenos
-                        </a>
-                    </div>
-                    <div className="px-5 py-2">
-                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                            Marcas
-                        </a>
-                    </div>
-                    <div className="px-5 py-2">
-                        <a href="#" className="text-base leading-6 text-gray-500 hover:text-gray-900">
-                            Términos y condiciones
-                        </a>
-                    </div>
-                </nav>
                 <p className="mt-8 text-base leading-6 text-center text-gray-400">
-                    Comprometidos en poner los mejores productos del mercado sobre tu manos!
+                    Comprometidos para evaluar softwares de calidad!
                 </p>
                 <div className="flex justify-center mt-8 space-x-6">
                     <a href="#" className="text-gray-400 hover:text-gray-500">
@@ -55,12 +38,11 @@ export const Footer = () => {
                         </svg>
                     </a>
                 </div>
-                <p className="text-extralight leading-6 text-center text-gray-400 tracking-wider">Desde 1997</p>
                 
             </div>
-            <div className='bg-amber-500 mb-4 py-1'>
+            <div className='bg-amber-500 mb-2 py-1'>
                 <p className="text-sm text-extralight leading-6 text-center text-white">
-                    Copyright © 2023 BnanaStores. Designed By <span className='font-bold leading-8 text-white'>Faded Luan.</span>
+                    Copyright © 2024 QualityQuest
                 </p>
             </div>
 
