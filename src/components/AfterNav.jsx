@@ -75,32 +75,32 @@ export const AfterNav = ({ isPopoverOpen }) => {
       <div className={`relative overfxlow-hidden bg-white transition-all duration-500 ease-in-out pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40 ${isPopoverOpen ? 'mt-0' : 'mt-0'}`}>
         <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
         <h2 className="text-xl font-semibold mb-4">PARÁMETROS</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full border-collapse border border-gray-300">
-            <thead className="bg-gray-100">
+        <div className="overflow-x-auto shadow-md sm:rounded-lg">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead className="bg-gray-50">
               <tr>
-                <th className="border border-gray-300 p-4 text-left">Código</th>
-                <th className="border border-gray-300 p-4 text-left">Item</th>
-                <th className="border border-gray-300 p-4 text-left">Descripción</th>
-                <th className="border border-gray-300 p-4 text-left">Preguntas</th>
-                <th className="border border-gray-300 p-4 text-left">% Total</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Código</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Item</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Descripción</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Preguntas</th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">% Total</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="bg-white divide-y divide-gray-200">
               {FuncionalItems.map((item) => (
                 <tr key={item.codigo}>
-                  <td className="border border-gray-300 p-4">{item.codigo}</td>
-                  <td className="border border-gray-300 p-4">{item.item}</td>
-                  <td className="border border-gray-300 p-4">{item.descripcion}</td>
-                  <td className="border border-gray-300 p-4">{item.preguntas}</td>
-                  <td className="border border-gray-300 p-4">{item.porcentajeTotal}</td>
+                  <td className="px-6 py-4 text-sm whitespace-nowrap">{item.codigo}</td>
+                  <td className="px-6 py-4 text-sm whitespace-nowrap">{item.item}</td>
+                  <td className="px-6 py-4 text-sm whitespace">{item.descripcion}</td>
+                  <td className="px-6 py-4 text-sm whitespace-nowrap">{item.preguntas}</td>
+                  <td className="px-6 py-4 text-sm whitespace-nowrap">{item.porcentajeTotal}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
         <div className="flex justify-center mt-8">
-            <button onClick={handleEvaluateClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={handleEvaluateClick} className="mx-auto rounded-md bg-green-600/[.9] px-14 py-1.5 text-center text-sm font-medium text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-500">
               EVALUAR SOFTWARE
             </button>
         </div>      

@@ -2,28 +2,28 @@ import React from 'react';
 
 const ComponenteTabla = ({ datos }) => {
   return (
-    <div className="overflow-x-auto">
-      <table className="min-w-full border-collapse border border-gray-300">
-        <thead className="bg-gray-100">
+    <div className="overflow-x-auto shadow-md sm:rounded-lg">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-50">
           <tr>
-            <th className="border border-gray-300 p-4 text-left">Código</th>
-            <th className="border border-gray-300 p-4 text-left">Item</th>
-            <th className="border border-gray-300 p-4 text-left">Descripción</th>
-            <th className="border border-gray-300 p-4 text-left">Valor</th>
-            <th className="border border-gray-300 p-4 text-left">Observaciones</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Item</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Código</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Descripción</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Valor</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Observaciones</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white divide-y divide-gray-200">
           {datos.map((item, index) => (
             <tr key={index}>
-              <td className="border border-gray-300 p-4">{item.codigo}</td>
-              <td className="border border-gray-300 p-4">{item.item}</td>
-              <td className="border border-gray-300 p-4">{item.descripcion}</td>
-              <td className="border border-gray-300 p-4">
-                <input type="number" className="border border-gray-300 p-2" defaultValue={item.valor} />
+              <td className="px-6 py-4 whitespace-nowrap">{item.codigo}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{item.item}</td>
+              <td className="px-6 py-4">{item.descripcion}</td>
+              <td className="px-6 py-4">
+                <input type="number" className="block w-full rounded-md border-0 px-3.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item.valor} />
               </td>
-              <td className="border border-gray-300 p-4">
-                <input type="text" className="border border-gray-300 p-2" defaultValue={item.observaciones} />
+              <td className="px-6 py-4">
+                <input type="text" className="block w-full rounded-md border-0 px-3.5 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" defaultValue={item.observaciones} />
               </td>
             </tr>
           ))}
