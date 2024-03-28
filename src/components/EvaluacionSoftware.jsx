@@ -14,52 +14,38 @@ export const EvaluacionSoftware = ({ isPopoverOpen, setMostrarEvaluacion }) => {
 
   const softwareItems = [
     {
-      codigo: 1,
-      item: 'FUNCIONALIDAD',
-      descripcion: 'La capacidad del software de cumplir con las funciones para satisfacer las necesidades explícitas e implícitas cuando es utilizado en condiciones específicas.',
+      codigo: 1.1,
+      item: 'Adecuación',
+      descripcion: 'La capacidad del  software para proveer un adecuado conjunto de funciones para las tareas y objetivos especificados por el usuario. Ejemplos de adecuación son la composición orientada a tareas de funciones a partir de sub funciones que las constituyen, y las capacidades de las tablas.',
       preguntas: 5,
       porcentajeTotal: '14%'
     },
     {
-      codigo: 2,
-      item: 'FIABILIDAD',
-      descripcion: 'La capacidad del software  para  asegurar  un  nivel   de funcionamiento adecuado cuando es  utilizando en condiciones especificas.',
+      codigo: 1.2,
+      item: 'Exactitud',
+      descripcion: 'La capacidad del  software para proveer los resultados o efectos acordados con un grado necesario de precisión. ',
       preguntas: 4,
       porcentajeTotal: '14%'
     },
     {
-      codigo: 3,
-      item: 'USABILIDAD',
-      descripcion: 'La capacidad del software de ser entendido, aprendido, y usado en forma fácil y atractiva',
+      codigo: 1.3,
+      item: 'Interoperabilidad',
+      descripcion: 'La capacidad del software de interactuar con uno o más sistemas especificados. La interoperabilidad  se utiliza en lugar de compatibilidad para evitar una posible ambigüedad con la reemplazabilidad.',
       preguntas: 5,
       porcentajeTotal: '15%'
     },
     {
-      codigo: 4,
-      item: 'EFICIENCIA',
-      descripcion: 'La forma del desempeño adecuado, de acuerdo a al número  recursos utilizados según las condiciones planteadas',
+      codigo: 1.4,
+      item: 'Seguridad',
+      descripcion: 'La capacidad del software para proteger la información y los datos de modo que las personas o los sistemas no autorizados no puedan leerlos o modificarlos, y a las personas o  sistemas autorizados  no se les niegue el acceso a ellos. La seguridad en un sentido amplio se define como característica de la calidad en uso, pues no se relaciona con el software solamente, sino con todo un sistema.',
       preguntas: 3,
       porcentajeTotal: '15%'
     },
     {
-      codigo: 5,
-      item: 'CAPACIDAD DE MANTENIMIENTO',
-      descripcion: 'La cualidad que tiene el software para ser modificado. Incluyendo correcciones o mejoras del  software, a cambios en el entorno, y especificaciones de requerimientos funcionales.',
+      codigo: 1.5,
+      item: 'Conformidad de la funcionalidad',
+      descripcion: 'La  capacidad  del software  de  adherirse  a  los  estándares, convenciones o regulaciones legales y  prescripciones similares referentes a la funcionalidad.',
       preguntas: 5,
-      porcentajeTotal: '14%'
-    },
-    {
-      codigo: 6,
-      item: 'PORTABILIDAD',
-      descripcion: 'La capacidad que tiene el software para ser trasladado de un entorno a otro. cubriendo entornos organizacionales, de hardware o de software',
-      preguntas: 5,
-      porcentajeTotal: '14%'
-    },
-    {
-      codigo: 7,
-      item: 'CALIDAD EN USO',
-      descripcion: 'Capacidad del software para permitirles a usuarios lograr las  metas  propuestas  con  eficacia,  productividad,  seguridad  y  satisfacción,  en contextos especificados de uso',
-      preguntas: 6,
       porcentajeTotal: '14%'
     },
   ];
@@ -81,8 +67,8 @@ export const EvaluacionSoftware = ({ isPopoverOpen, setMostrarEvaluacion }) => {
                 <th className="border border-gray-300 p-4 text-left">Código</th>
                 <th className="border border-gray-300 p-4 text-left">Item</th>
                 <th className="border border-gray-300 p-4 text-left">Descripción</th>
-                <th className="border border-gray-300 p-4 text-left">Preguntas</th>
-                <th className="border border-gray-300 p-4 text-left">% Total</th>
+                <th className="border border-gray-300 p-4 text-left">Valor</th>
+                <th className="border border-gray-300 p-4 text-left">Obervaciones</th>
               </tr>
             </thead>
             <tbody>
@@ -100,7 +86,7 @@ export const EvaluacionSoftware = ({ isPopoverOpen, setMostrarEvaluacion }) => {
         </div>
         <div className="flex justify-center mt-8">
             <button onClick={handleEvaluateClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              EVALUAR SOFTWARE
+              EVALUAR FUNCIONALIDAD
             </button>
           </div>         
         </div>

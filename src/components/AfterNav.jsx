@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -12,7 +12,9 @@ export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
     });
   }, []);
 
-  const softwareItems = [
+  const navigate = useNavigate();
+
+  const FuncionalItems = [
     {
       codigo: 1,
       item: 'FUNCIONALIDAD',
@@ -65,7 +67,7 @@ export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
   ];
 
   const handleEvaluateClick = () => {
-    setMostrarEvaluacion(true); 
+    navigate('/evaluacion-software'); 
   };
 
   return (
@@ -85,7 +87,7 @@ export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
               </tr>
             </thead>
             <tbody>
-              {softwareItems.map((item) => (
+              {FuncionalItems.map((item) => (
                 <tr key={item.codigo}>
                   <td className="border border-gray-300 p-4">{item.codigo}</td>
                   <td className="border border-gray-300 p-4">{item.item}</td>
@@ -101,7 +103,7 @@ export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
             <button onClick={handleEvaluateClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               EVALUAR SOFTWARE
             </button>
-          </div>         
+        </div>      
         </div>
       </div>
     </div>

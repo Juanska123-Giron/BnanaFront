@@ -14,7 +14,7 @@ import { EvaluacionSoftware } from './components/EvaluacionSoftware.jsx';
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-  const [mostrarEvaluacion, setMostrarEvaluacion] = useState(false); 
+  const [mostrarEvaluacion] = useState(false); 
 
   useEffect(() => {
     AOS.init({
@@ -32,7 +32,11 @@ function App() {
             path="/"
             element={
               mostrarEvaluacion ? (
-                <EvaluacionSoftware /> // Muestra el componente de evaluación
+                <EvaluacionSoftware 
+                isPopoverOpen={isPopoverOpen}
+                handlePopoverOpen={() => setIsPopoverOpen(true)}
+                handlePopoverClose={() => setIsPopoverOpen(false)}
+                /> // Muestra el componente de evaluación
               ) : (
                 <Home // Componente original con una prop adicional
                   isPopoverOpen={isPopoverOpen}
@@ -40,7 +44,6 @@ function App() {
                   handlePopoverClose={() => setIsPopoverOpen(false)}
                   loggedInUser={loggedInUser}
                   setLoggedInUser={setLoggedInUser}
-                  setMostrarEvaluacion={setMostrarEvaluacion} // Pasamos la función para cambiar el estado
                 />
               )
             }
@@ -51,7 +54,7 @@ function App() {
           <Route path="/olvide-password" element={<OlvidePassword />} />
           <Route path="/nuevoPassword" element={<NuevoPassword />} />
           <Route path="/usuarioInfo" element={<UsuarioInfo loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />} />
-          {/* Agrega aquí el resto de tus rutas */}
+          <Route path="/evaluacion-software" element={<EvaluacionSoftware />} />
         </Routes>
       </div>
     </Router>

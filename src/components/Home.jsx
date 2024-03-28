@@ -37,7 +37,12 @@ export const Home = ({
           />
       </div>
       {mostrarEvaluacion ? (
-        <EvaluacionSoftware />
+      <div data-aos='zoom-in'>
+        <EvaluacionSoftware 
+        isPopoverOpen={isPopoverOpen}
+        setMostrarEvaluacion={setMostrarEvaluacion}
+          />
+      </div>
       ) : (
         <div data-aos='zoom-in'>
           <AfterNav 
