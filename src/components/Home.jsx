@@ -4,7 +4,7 @@ import { AfterNav } from './AfterNav';
 import { Footer } from './Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { EvaluacionSoftware } from './EvaluacionSoftware';
+import EvaluacionSoftware from './EvaluacionSoftware';
 
 export const Home = ({ 
   isPopoverOpen, 
@@ -38,10 +38,7 @@ export const Home = ({
       </div>
       {mostrarEvaluacion ? (
       <div data-aos='zoom-in'>
-        <EvaluacionSoftware 
-        isPopoverOpen={isPopoverOpen}
-        setMostrarEvaluacion={setMostrarEvaluacion}
-          />
+        <EvaluacionSoftware/>
       </div>
       ) : (
         <div data-aos='zoom-in'>

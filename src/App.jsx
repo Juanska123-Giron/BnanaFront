@@ -9,7 +9,8 @@ import { ConfirmAccount } from "./components/ConfirmAccount.jsx";
 import { OlvidePassword } from "./components/OlvidePassword.jsx";
 import { NuevoPassword } from './components/NuevoPassword.jsx';
 import { UsuarioInfo } from './components/UsuarioInfo.jsx';
-import { EvaluacionSoftware } from './components/EvaluacionSoftware.jsx';
+import EvaluacionSoftware from './components/EvaluacionSoftware.jsx';
+import { ResultadosTotales } from './components/ResultadosTotales.jsx';
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
@@ -55,6 +56,7 @@ function App() {
           <Route path="/nuevoPassword" element={<NuevoPassword />} />
           <Route path="/usuarioInfo" element={<UsuarioInfo loggedInUser={loggedInUser} setLoggedInUser={setLoggedInUser} />} />
           <Route path="/evaluacion-software" element={<EvaluacionSoftware />} />
+          <Route path="/resultados-totales" element={<ResultadosTotales />} />
         </Routes>
       </div>
     </Router>

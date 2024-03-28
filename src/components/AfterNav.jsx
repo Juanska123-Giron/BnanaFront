@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
+export const AfterNav = ({ isPopoverOpen }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
