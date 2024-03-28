@@ -69,7 +69,7 @@ const navigation = {
     ],
     pages: [
       { name: 'Sobre Nosotros', href: '#' },
-      { name: 'Sucursales', href: '#' },
+      // { name: 'Sucursales', href: '#' },
     ],
 }
 

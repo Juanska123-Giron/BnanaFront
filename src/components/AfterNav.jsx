@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-export const AfterNav = ({ isPopoverOpen }) => {
+export const AfterNav = ({ isPopoverOpen, setMostrarEvaluacion }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -64,6 +64,10 @@ export const AfterNav = ({ isPopoverOpen }) => {
     },
   ];
 
+  const handleEvaluateClick = () => {
+    setMostrarEvaluacion(true); 
+  };
+
   return (
     <div className={`relative overflow-hidden bg-white transition-all duration-500 ease-in-out ${isPopoverOpen ? 'mt-128' : 'mt-0'}`}>
       <div className={`relative overfxlow-hidden bg-white transition-all duration-500 ease-in-out pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40 ${isPopoverOpen ? 'mt-0' : 'mt-0'}`}>
@@ -94,10 +98,10 @@ export const AfterNav = ({ isPopoverOpen }) => {
           </table>
         </div>
         <div className="flex justify-center mt-8">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onClick={handleEvaluateClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               EVALUAR SOFTWARE
             </button>
-        </div>             
+          </div>         
         </div>
       </div>
     </div>
